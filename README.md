@@ -17,7 +17,7 @@ The complete API reference document is available [here](http://images.indiainfol
 
 # Usage
 
-To begin using this API, Please Signup [here](https://eaccount.indiainfoline.com/appsupport.broking@iifl.com)
+To begin using this API, Please Signup [here](https://eaccount.indiainfoline.com/)
 
 
 ## Contact us
