@@ -13,3 +13,13 @@ Our REST APIs can help you build a complete investment and trading platform in n
  
  
 The complete API reference document is available [here](http://images.indiainfoline.com/mailers/landingpage/Trade-API-Custom/Trade-API-Landingpage17Aug/landing-page.html)
+
+
+# Usage
+
+To begin using this API, Please Signup [here](https://eaccount.indiainfoline.com/appsupport.broking@iifl.com)
+
+
+## Contact us
+
+For any queries please contact our Support at: appsupport.broking@iifl.com
