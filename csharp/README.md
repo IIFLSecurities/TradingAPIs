@@ -1,4 +1,4 @@
-# IIFL Market OpenApi CSharp examples
+# IIFL Market Trading APIs CSharp examples
 
 This working examples demonstrates the usage of market OpenApi.
 The complete API reference document is available [here](http://images.indiainfoline.com/mailers/landingpage/Trade-API-Custom/Trade-API-Landingpage17Aug/landing-page.html)

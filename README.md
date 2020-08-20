@@ -1,4 +1,4 @@
-# IIFL Market OpenApi
+# IIFL Market Trading APIs
 
 We at IIFL Securities extend our APIs to be used with your own trading tools, widgets or platform and at no additional costs.
 
