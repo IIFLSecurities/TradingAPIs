@@ -1,0 +1,51 @@
+import os
+import configparser
+from django.http import JsonResponse
+from common_utils import auth, custom_exceptions, ref_strings
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+conf_file_path = dir_path+'/configuration.ini'
+config = configparser.RawConfigParser()
+config.read(conf_file_path)
+
+auth = auth.EncryptionClient()
+
+def get_env():
+    return config
+
+def get_error_traceback(sys, e):
+    exc_type, exc_obj, exc_tb = sys.exc_info()
+    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+    return "%s || %s || %s || %s" %(exc_type, fname, exc_tb.tb_lineno,e)
+
+def check_if_present(*args,**kwargs):
+    """
+    For Server Side Checks
+    """
+    # print (args)
+    if not all(arg for arg in args):
+        raise custom_exceptions.UserException(ref_strings.Common.missing_req_param)
+
+    if not all(val for key, val in kwargs.items()):
+        raise custom_exceptions.UserException(ref_strings.Common.missing_req_param)
+
+def send_sucess_message(param={}):
+    param['sucess'] = True
+    return JsonResponse(param)
+
+
+def send_error_message(param={}):
+    param['sucess'] = False
+    return JsonResponse(param)
+
+
+
+
+# def enc_user_id():
+#     ab = auth.encrypt(str(UserId))
+#     return ab
+#
+# def enc_pw():
+#     ab = auth.encrypt(str(Password))
+#     return ab
