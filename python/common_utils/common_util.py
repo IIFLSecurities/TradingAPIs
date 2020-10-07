@@ -2,6 +2,7 @@ import os
 import configparser
 from django.http import JsonResponse
 from common_utils import auth, custom_exceptions, ref_strings
+import time
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -40,12 +41,7 @@ def send_error_message(param={}):
     return JsonResponse(param)
 
 
-
-
-# def enc_user_id():
-#     ab = auth.encrypt(str(UserId))
-#     return ab
-#
-# def enc_pw():
-#     ab = auth.encrypt(str(Password))
-#     return ab
+def time_milli_second(expiry_time=False):
+    if expiry_time:
+        return int((time.time()+24*3600)*1000.0)  ##assuming expiry time is 24 hr from now
+    return int(time.time()*1000.0)
