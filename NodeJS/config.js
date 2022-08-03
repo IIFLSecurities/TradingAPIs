@@ -1,0 +1,42 @@
+require("dotenv").config();
+exports.urls = {
+  baseUrl: "https://dataservice.iifl.in/openapi/prod",
+  loginRequestMobileForVendor: "/LoginRequestMobileForVendor",
+  LoginRequestV2: "/LoginRequest",
+  OrderRequest: "/OrderRequest",
+  HoldingV2: "/Holding",
+  MarginV3: "/Margin",
+  OrderBookV2: "/OrderBookV2",
+  OrderBookV1:
+    "https://iifluat.indiainfoline.com/OpenApi/Service1.svc/V1/OrderBook",
+  TradeBookV1: "/TradeBook",
+  PreOrdMarginCalculation: "/PreOrdMarginCalculation",
+  TradeInformation: "/TradeInformation",
+  NetPositionV4: "/NetPosition",
+  NetPositionNetWiseV1: "/NetPositionNetWise",
+  OrderStatus: "/OrderStatus",
+  MarketFeed: "/MarketFeed",
+  BackoffClientProfile: "/BackoffClientProfile",
+  BackoffEquitytransaction: "/BackoffEquitytransaction",
+  BackoffFutureTransaction: "/BackoffFutureTransaction",
+  BackoffoptionTransaction: "/BackoffoptionTransaction",
+  BackoffMutualFundTransaction: "/BackoffMutualFundTransaction",
+  BackoffLedger: "/BackoffLedger",
+  BackoffDPTransaction: "/BackoffDPTransaction",
+  BackoffDPHolding: "/BackoffDPHolding",
+};
+
+exports.credentials = {
+  Email_id: process.env.EmailID,
+  ContactNumber: process.env.ContactNumber,
+  AppName: process.env.AppName,
+  AppSource: process.env.AppSource,
+  UserKey: process.env.UserKey,
+  UserId: process.env.UserId,
+  Password: process.env.Password,
+  EncryKey: process.env.enc_key,
+  OcpApimSubscriptionKey: process.env.OcpApimSubscriptionKey,
+  My2Pin: process.env.My2Pin,
+  ClientCOde: process.env.ClientCOde,
+  cpass: process.env.cpass,
+};
