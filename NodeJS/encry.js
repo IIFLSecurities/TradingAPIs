@@ -1,28 +1,12 @@
 const crypto = require("crypto");
-// const {urls} = require('./config');
+const { credentials, urls } = require("./config");
 
 class EncryptionClient {
   constructor() {
     this.iv = Buffer.from([
-      83,
-      71,
-      26,
-      58,
-      54,
-      35,
-      22,
-      11,
-      83,
-      71,
-      26,
-      58,
-      54,
-      35,
-      22,
-      11,
+      83, 71, 26, 58, 54, 35, 22, 11, 83, 71, 26, 58, 54, 35, 22, 11,
     ]);
-    this.enc_key =
-      "YxjDEpOqxMSHJoXWb06CxjLNJxsZGNR0Z7Rg112orvaraf5UsWApy5tH8gCIEDO3";
+    this.enc_key = credentials.EncryKey;
   }
 
   encrypt(text) {
